@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5000/swagger;http://localhost:4200",
+      "serviceActions": {
+        "bns.api": "StartDebugging"
+      }
+    }
+  }
+}
