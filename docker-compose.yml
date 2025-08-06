@@ -72,7 +72,6 @@
       #KC_PROXY: edge
     ports:
       - "8083:8080"
-      # - "8084:8080"
     depends_on:
       - db
   nginx:
