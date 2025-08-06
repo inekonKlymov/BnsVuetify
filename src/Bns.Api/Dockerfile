@@ -29,4 +29,5 @@ RUN dotnet publish "./Bns.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Bns.Api.dll"]
+#ENTRYPOINT ["dotnet", "Bns.Api.dll"]
+CMD ["dotnet", "watch", "run", "--urls", "http://0.0.0.0:80"]

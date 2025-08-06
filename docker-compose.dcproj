@@ -15,5 +15,9 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include="nginx.conf" />
+    <None Include="nginx\Dockerfile" />
+    <None Include="nginx\entrypoint.sh" />
+    <None Include="nginx\nginx.conf" />
   </ItemGroup>
 </Project>

@@ -90,6 +90,6 @@ if (!app.Environment.IsDevelopment())
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapGroup("/api/auth/").MapIdentityApi<User>();
+//app.MapGroup("/api/auth/").MapIdentityApi<User>();
 
 app.Run();

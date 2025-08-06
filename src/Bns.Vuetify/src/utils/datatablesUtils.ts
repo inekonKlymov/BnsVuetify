@@ -48,7 +48,7 @@ const Ajax = {
       axios.post(url, data, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': `Bearer ${auth.token}`,
+          // 'Authorization': `Bearer ${auth.token}`,
         },
         withCredentials: true,
       }).then(response => {

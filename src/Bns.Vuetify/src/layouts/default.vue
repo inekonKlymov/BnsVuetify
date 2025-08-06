@@ -47,8 +47,7 @@
   import { useAuthStore } from '@/stores'
 
   const auth = useAuthStore()
-  console.log('Auth store:', auth)
-  const username = auth.user
+  const username = auth.username
   const drawer = ref(true)
   const rail = ref(true)
   const items = ref([

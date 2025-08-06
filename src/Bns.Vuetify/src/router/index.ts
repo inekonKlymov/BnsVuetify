@@ -11,13 +11,11 @@ import { createRouter, createWebHistory } from 'vue-router/auto'
 // eslint-disable-next-line import/no-duplicates
 import { routes } from 'vue-router/auto-routes'
 
-import { useAuthStore } from '@/stores/auth'
-
-for (const route of routes) {
-  if (route.name !== '/login') {
-    route.meta = { ...route.meta, requiresAuth: true }
-  }
-}
+// for (const route of routes) {
+//   if (route.name !== '/login') {
+//     route.meta = { ...route.meta, requiresAuth: true }
+//   }
+// }
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,14 +36,14 @@ router.onError((err, to) => {
     console.error(err)
   }
 })
-router.beforeEach((to, from, next) => {
-  const auth = useAuthStore()
-  if ((to.meta.requiresAuth && (!auth.isAuthenticated))) {
-    next('/login')
-  } else {
-    next()
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   const auth = useAuthStore()
+//   if ((to.meta.requiresAuth && (!auth.isAuthenticated))) {
+//     next('/login')
+//   } else {
+//     next()
+//   }
+// })
 router.isReady().then(() => {
   localStorage.removeItem('vuetify:dynamic-reload')
 })
